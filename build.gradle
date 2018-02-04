@@ -1,0 +1,32 @@
+group 'test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: "com.googlecode.java-diff-utils", name: "diffutils", version: "1.2.1"
+}
+
+
+mainClassName = 'SwaggerCodeMerger.Main'
+
+def executableBaseName = "swagger-stub-merger"
+
+task executableJar(type: Jar, dependsOn: jar)  {
+    archiveName = "${executableBaseName}.jar"
+    manifest {
+        attributes 'Main-Class' : mainClassName
+    }
+
+    from configurations.compile.collect {it.isDirectory() ? it : zipTree(it)}
+    //from "$buildDir/classes/main"
+    from "$buildDir/classes/java/main"
+    from "$buildDir/resources/main"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger-stub-merger.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger-stub-merger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger-stub-merger_main.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger-stub-merger_main.iml" group="swagger-stub-merger" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger-stub-merger_test.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger-stub-merger_test.iml" group="swagger-stub-merger" />
+    </modules>
+  </component>
+</project>
