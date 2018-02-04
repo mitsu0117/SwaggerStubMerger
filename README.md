@@ -22,7 +22,17 @@ Stub merging processes are implemented as follow;
    If a function with the annotation is found in the last stub, the function is substituted with the corresponding function in the new stud programs.
 
 ### How to user
+```
+# Clone swagger stub merger.
+git clone https://github.com/mitsu0117/SwaggerStubMerger.git
 
+# Build with gradle.
+./gradlew executableJars
 
+# Run swagger-stub-merger.jar with merging stub programs.
+java -jar swagger-stub-merger.jar \
+     --output-dir ./merged \
+     --new-stub-root-dir ../../src/test/resources/nodejs-server-server-after \
+     --current-stub-root-dir ../../src/test/resources/nodejs-server-server-before
 
-
+```
